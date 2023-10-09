@@ -86,6 +86,8 @@ internal extension Engine {
     static let peerConnectionFactory: RTCPeerConnectionFactory = {
 
         logger.log("Initializing SSL...", type: Engine.self)
+        
+        RTCSetMinDebugLogLevel(.verbose)
 
         RTCInitializeSSL()
 
